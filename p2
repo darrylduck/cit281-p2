@@ -1,0 +1,54 @@
+/*
+CIT 281 Project 2
+Name: Darryl Evans
+*/
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+    }
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    let result = "";
+    for (let i = 0; i < getRandomInteger(5, 26); i++) {
+    result += alphabet[getRandomInteger(1,alphabet.length-1)];
+    }
+    console.log(result);
+    
+    // Returns a single, random lowercase letter from the alphabet
+function getRandomLetter() {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const index = Math.floor(Math.random() * alphabet.length);
+    return alphabet[index];
+  }
+  
+  // Update the for loop to call getRandomLetter()
+  for (let i = 0; i < 10; i++) {
+    const letter = getRandomLetter();
+    console.log(letter);
+  }
+
+  // Returns a random length string between minLength and maxLength (inclusive)
+  function getRandomString(minLength, maxLength) {
+    let length = getRandomInteger(minLength, maxLength);
+    let str = '';
+    for (let i = 0; i < length; i++) {
+      str += getRandomLetter();
+    }
+    return str;
+  }
+  
+  // Returns a random string of length between 10 and 20 characters (inclusive)
+  console.log(getRandomString(10, 20));
+  
+  // Returns a string sorted in ascending order
+function getSortedString(string) {
+    return string.split('').sort().join('');
+  }
+  
+  // Logs a random string of length between 10 and 20 characters (inclusive) to the console
+  console.log(getRandomString(10, 20));
+  
+  // Logs a string sorted in ascending order to the console
+  console.log(getSortedString('xpacd'));
+
+  
+
